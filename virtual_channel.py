@@ -22,8 +22,7 @@ for key,value in virtual_connections.items():
             break
 
 
-for i in range(0,25):
-    print(i)
+
 
 
 

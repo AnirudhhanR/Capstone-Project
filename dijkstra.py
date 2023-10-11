@@ -74,5 +74,3 @@ if __name__ == "__main__":
 
     print("All paths from source to destination using DIJKSTRA Algorithm :")
     print_paths(source, destination)
-
-a = 3
