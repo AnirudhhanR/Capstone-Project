@@ -42,7 +42,7 @@ def print_paths(src, dest):
     find_paths(graph, src, dest, [src], paths)
 
     paths.sort(key=len)
-    print(paths)
+    # print(paths)
 
     adj = main.value
     print("adj is", adj)
