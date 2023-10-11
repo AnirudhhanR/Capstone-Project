@@ -50,6 +50,7 @@ def hello(source,destination,data_size):
             visualize_graph_with_path(G, pos, shortest_path)
         except nx.NetworkXNoPath:
             print(f"No path from {source} to {destination}")
+            deadlock_node = 3
 
     # Function to visualize the graph with highlighted shortest path
     def visualize_graph_with_path(G, pos, shortest_path):
