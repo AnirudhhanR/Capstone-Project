@@ -44,7 +44,7 @@ def print_paths(src, dest):
     paths.sort(key=len)
     print(paths)
 
-    '''
+
     hoplist=[]
     for i in paths:
         if i[2] == adj[i]:
@@ -55,7 +55,7 @@ def print_paths(src, dest):
     
     for path in paths:
         print(" -> ".join(map(str, path)))
-    '''
+    
 
 if __name__ == "__main__":
     source = int(input("Enter the source node : ")) 
@@ -64,4 +64,3 @@ if __name__ == "__main__":
     print("All paths from source to destination using DIJKSTRA Algorithm :")
     print_paths(source, destination)
 
-a = 3
