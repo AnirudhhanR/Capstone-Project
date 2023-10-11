@@ -1,6 +1,6 @@
 
 import main
-adj = main.value
+
 
 
 def is_valid(node):
@@ -44,15 +44,26 @@ def print_paths(src, dest):
     paths.sort(key=len)
     print(paths)
 
-    '''
+    adj = main.value
+    print("adj is", adj)
     hoplist=[]
     for i in paths:
-        if i[2] == adj[i]:
-            hoplist.append(i)
+        print("i of 1 is ",i[1])
+        for j in range(len(adj)):
+            if i[1] == adj[j]:
+                # print("heloo")
+                # print("this is", i)
+                hoplist.append(i)
+                
 
-    print(hoplist)
+
+            
+
     print('hoplist=',hoplist)
+    nextnode = hoplist[0][1]
+    print(f'next node is{nextnode}')
     
+    '''
     for path in paths:
         print(" -> ".join(map(str, path)))
     '''
