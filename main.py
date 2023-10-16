@@ -77,6 +77,7 @@ dict1 = {
     8: (2, 0), 9: (2, 1), 10: (2, 2), 11: (2, 3),
     12: (3, 0), 13: (3, 1), 14: (3, 2), 15: (3, 3)
 }
+
 print("Node Assignment : \n", dict1)
 
 # s = list(dict1[src])
@@ -189,16 +190,20 @@ for i in range(len(path) - 1):
     t0_1, t1_0, t1_2, t2_1, t2_3, t3_2, t0_4, t4_0, t4_5, t5_4, t1_5, t5_1, t5_6, t6_5, t2_6, t6_2, t6_7, t7_6, t3_7, t7_3, t4_8, t8_4, t8_9, t9_8, t5_9, t9_5, t6_10, t10_6, t9_10, t10_9, t7_11, t11_7, t11_10, t10_11, t12_13, t13_12, t8_12, t12_8, t9_13, t13_9, t10_14, t14_10, t13_14, t14_13, t14_15, t15_14, t11_15, t15_11 = next(
         data_generator)
     # print(t0_1)
-    tf_link = eval(f"t{node1}_{node2}")  # value
-    # print(f"The amount of traffic genarated randomly in the link is : { tf_link}")
-    tf_link_bits = math.floor(tf_link)  # traffic generated randomly in bits
-    print(f"The Current traffic in the link ( in terms of bits) : {tf_link_bits}")
-    available_bit_space = 64 - tf_link_bits
 
-    print(f"The path is taken from node  {node1}  to node {node2}")
-    print(f"The traffic present in path i,e node {node1} and node {node2} is {tf_link_bits}")
-    print(f"The available space between node {node1} and node {node2} in bits is {available_bit_space}")
+    def available(node1, node2):
+        tf_link = eval(f"t{node1}_{node2}")  # value
+        # print(f"The amount of traffic genarated randomly in the link is : { tf_link}")
+        tf_link_bits = math.floor(tf_link)  # traffic generated randomly in bits
+        print(f"The Current traffic in the link ( in terms of bits) : {tf_link_bits}")
+        available_bit_space = 64 - tf_link_bits
 
+        print(f"The path is taken from node  {node1}  to node {node2}")
+        print(f"The traffic present in path i,e node {node1} and node {node2} is {tf_link_bits}")
+        print(f"The available space between node {node1} and node {node2} in bits is {available_bit_space}")
+
+        return available_bit_space
+    available_bit_space = available(node1, node2)
     neighbor_list = []
     value = []
     if n < available_bit_space:
@@ -213,13 +218,11 @@ for i in range(len(path) - 1):
         for final_node in neighbor_list:
              #print(final_node)
              for i in dict1 :
+                
                  if dict1[i] == final_node:
                       value.append(i)
+                      
         value.remove(node2)
-        print(value)
-
-        
-        
         break
         #adaptive.hello(node1,dest,n)
 
