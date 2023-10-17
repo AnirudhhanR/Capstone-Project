@@ -1,6 +1,6 @@
 
 # code to find next node, called as next_node in new_adaptive.py
-import main
+# import main
 
 
 
@@ -18,7 +18,7 @@ def find_paths(graph, src, dest, path, paths):
             find_paths(graph, neighbor, dest, path, paths)
             path.pop()
 
-def print_paths(src, dest):
+def print_paths(src, dest, adj):
     graph = {
         0: [1,4],
         1: [0, 2, 5],
@@ -44,8 +44,6 @@ def print_paths(src, dest):
 
     paths.sort(key=len)
     # print(paths)
-
-    adj = main.value
     print("adj is", adj)
     
     hoplist=[]
@@ -61,18 +59,19 @@ def print_paths(src, dest):
 
             
 
-    print('hoplist=',hoplist)
-    nextnode = hoplist[0][1]
-    print(f'next node is {nextnode}')
+    #print('hoplist=',hoplist)
+    nextnode1 = hoplist[0][1]
+    print(f'next node is {nextnode1}')
+    return nextnode1
+    # print(f"blocked node is {src}")
     
-    '''
-    for path in paths:
-        print(" -> ".join(map(str, path)))
-    '''
+    # for path in paths:
+    #     print(" -> ".join(map(str, path)))
+    
 
-if __name__ == "__main__":
-    source = int(input("Enter the source node : ")) 
-    destination = int(input( "Enter the destination node :"))
+# if __name__ == "__main__":
+#     source = int(input("Enter the source node : ")) 
+#     destination = int(input( "Enter the destination node :"))
 
-    print("All paths from source to destination using DIJKSTRA Algorithm :")
-    print_paths(source, destination)
+#     print("All paths from source to destination using DIJKSTRA Algorithm :")
+#     print_paths(source, destination)

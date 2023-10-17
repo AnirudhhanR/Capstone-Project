@@ -6,7 +6,8 @@ import time
 # import adaptive_traffic
 #import algorithm
 import final_traffic
-#import adaptive
+import new_adaptive
+import dijkstra
 
 
 dest_reached = False
@@ -213,6 +214,7 @@ for i in range(len(path) - 1):
         print(" Required space is not available in the link so take adaptive routing")
         #adaptive.hello(node1,dest,n)
         #algorithm.find_shortest_path_with_min_traffic(node1, dest, n)
+        # new_adaptive.adaptive_route(node1, dest)
 
         neighbor_list = get_neighbors(dict1[node1],4,4)
         for final_node in neighbor_list:
@@ -223,6 +225,8 @@ for i in range(len(path) - 1):
                       value.append(i)
                       
         value.remove(node2)
+        new_adaptive.adaptive_route(node1, dest)
+        # dijkstra.print_paths(node1, dest, value)
         break
         #adaptive.hello(node1,dest,n)
 

@@ -81,6 +81,7 @@ def hello(source,destination,data_size):
     # Call the traffic generation function to determine traffic values
     traffic_values = [final_traffic.generate_random_traffic() for _ in range(len(edges))]
     update_traffic_values(traffic_values)
+    print("traffic values = ", traffic_values)
     
 
     # Print the traffic values used
