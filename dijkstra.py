@@ -1,4 +1,5 @@
 
+# code to find next node, called as next_node in new_adaptive.py
 import main
 
 
@@ -46,9 +47,10 @@ def print_paths(src, dest):
 
     adj = main.value
     print("adj is", adj)
+    
     hoplist=[]
     for i in paths:
-        print("i of 1 is ",i[1])
+        # print("i of 1 is ",i[1])
         for j in range(len(adj)):
             if i[1] == adj[j]:
                 # print("heloo")
@@ -61,7 +63,7 @@ def print_paths(src, dest):
 
     print('hoplist=',hoplist)
     nextnode = hoplist[0][1]
-    print(f'next node is{nextnode}')
+    print(f'next node is {nextnode}')
     
     '''
     for path in paths:
