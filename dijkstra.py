@@ -1,8 +1,5 @@
 
 # code to find next node, called as next_node in new_adaptive.py
-# import main
-
-
 
 def is_valid(node):
     return 0 <= node < 16
