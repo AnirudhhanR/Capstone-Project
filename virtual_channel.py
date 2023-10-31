@@ -113,6 +113,7 @@ def create_virtual_channel(blocked_node,dest):
 
 
 
+
     # global flag
     # print("virtual channel",virtual_channel)
     # print("flag",flag)
