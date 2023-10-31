@@ -103,11 +103,8 @@ def create_virtual_channel(blocked_node,dest):
     
     print("flag",flag)
     flag=0
-    return next_virtual_node
-    
-    
 
-#create_virtual_channel(1,15)
+create_virtual_channel(5,0)
 
 
 
@@ -118,48 +115,6 @@ def create_virtual_channel(blocked_node,dest):
     # print("flag",flag)
     # flag=0
     # return virtual_channel
-def delay_vc(current_node,dest):
-    dict1 = {
-        0: (0, 0), 1: (0, 1), 2: (0, 2), 3: (0, 3),
-        4: (1, 0), 5: (1, 1), 6: (1, 2), 7: (1, 3),
-        8: (2, 0), 9: (2, 1), 10: (2, 2), 11: (2, 3),
-        12: (3, 0), 13: (3, 1), 14: (3, 2), 15: (3, 3)
-    }
-    s = dict1[current_node]
-    d = dict1[dest]
-    
-    
-    
-
-    sx, sy = s
-    dx, dy = d
-
-    path = []
-
-    if sy < dy:
-        while sy < dy:
-            path.append([sx, sy])
-            sy += 1
-            
-    elif sy > dy:
-        while sy > dy:
-            path.append([sx, sy])
-            sy -= 1
-
-    if sy==dy and sx < dx:
-        while sx < dx:
-                path.append([sx, sy])
-                sx += 1
-    elif sy==dy and sx > dx:
-        while sx > dx:
-                path.append([sx, sy])
-                sx -= 1
-
-    path.append([dx, dy])
-    delay = 1.4 + (len(path)- 1)
-    return delay
-
-#create_virtual_channel(5,12)
 
 
 
