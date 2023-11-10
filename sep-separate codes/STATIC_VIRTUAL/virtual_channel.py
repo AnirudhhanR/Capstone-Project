@@ -8,6 +8,7 @@
 flag=0 
 def request():
     global flag
+    print("")
     print("Request for acknowledgement of virtual channel,therefore the flag value is "+str(flag))
     #if flag==0, noone has requested for virtual channel, else if flag ==1 virtual channel has been requested by another user
     if(flag != 0):

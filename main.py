@@ -18,15 +18,17 @@ wait_delay = 0
 def available(node1, node2,tf_link):
                 # node_traffic(path)
                 #tf_link = eval(f"t{node1}_{node2}")  # value
-                print("inside function tf_link: ", tf_link)
+                #print("inside function tf_link: ", tf_link)
                 # print(f"The amount of traffic genarated randomly in the link is : { tf_link}")
                 tf_link_bits = math.floor(tf_link)  # traffic generated randomly in bits
-                print(f"The Current traffic in the link ( in terms of bits) : {tf_link_bits}")
+                #print(f"The Current traffic in the link ( in terms of bits) : {tf_link_bits}")
                 available_bit_space = 64 - tf_link_bits
 
-                print(f"The path is taken from node  {node1}  to node {node2}")
+                #print(f"The path is taken from node  {node1}  to node {node2}")
                 print(f"The traffic present in path i,e node {node1} and node {node2} is {tf_link_bits}")
                 print(f"The available space between node {node1} and node {node2} in bits is {available_bit_space}")
+                print("")
+                # print("*"*100)
 
                 return available_bit_space
 
@@ -36,7 +38,7 @@ def xy_routing(src, dest, n):
         d = dict1[dest]
         
         
-        print("Src Node coordinates = ", s, "\nDest Node = ", d)
+        #print("Src Node coordinates = ", s, "\nDest Node = ", d)
 
         sx, sy = s
         dx, dy = d
@@ -67,7 +69,7 @@ def xy_routing(src, dest, n):
 
 
 
-        print("Path: ", path)
+        #print("Path: ", path)
 
 
 
@@ -84,7 +86,7 @@ def xy_routing(src, dest, n):
             if j < columns - 1:
                 neighbors.append((i, j + 1))
 
-            print(neighbors)
+            # print(neighbors)
 
             return neighbors
 
@@ -108,9 +110,9 @@ def xy_routing(src, dest, n):
                 data_generator)
             #print(t0_1)
             tf_link = eval(f"t{node1}_{node2}")
-            print("node1 :",node1)
-            print("node2: ",node2)
-            print("tf_link :",tf_link)
+            # print("node1 :",node1)
+            # print("node2: ",node2)
+            # print("tf_link :",tf_link)
             
             # def available(node1, node2,tf_link):
             #         # node_traffic(path)
@@ -133,13 +135,18 @@ def xy_routing(src, dest, n):
             value = []
             if n <= available_bit_space:
                 print("Required space is available in the link and the data is sent ")
+                print("")
+                # print("*"*100)
                 global hop_count
                 hop_count += 1
                 #global final_path
                 final_path.append(node2)
                 pass
             else:
-                print(" Required space is not available in the link so take adaptive routing")
+                print("Required space is not available in the link so take adaptive routing")
+                print("")
+                print("*"*100)
+                print("")
                 #adaptive.hello(node1,dest,n)
                 #algorithm.find_shortest_path_with_min_traffic(node1, dest, n)
                 # new_adaptive.adaptive_route(node1, dest)
@@ -160,7 +167,7 @@ def xy_routing(src, dest, n):
                     value.remove(temp)
                 value = sorted(value)
                 #print("previous node is removed:")
-                print("final value list : ",value)
+                #print("final value list : ",value)
                 adaptive_route(node1,dest, n, value)
                 # dijkstra.print_paths(node1, dest, value)
                 break
@@ -175,13 +182,13 @@ def adaptive_route(src,dest,n,value):
     }
 
     blocked_node = src
-    print("blocked_node is ",blocked_node)
-    print("neighboring nodes are: ", value)
+    print("Blocked_node is ",blocked_node)
+    print("Neighboring nodes are: ", value)
 
     adj = value                              # chumma instead of changing everything, keep like this only
     traffic_prediction = []
     for i in adj:
-        print("in new adaptive")
+        
         coordinate = dict1[i]
         data_generator = final_traffic.generate_data()
         #print(main.available(main.node1,i))
@@ -189,16 +196,16 @@ def adaptive_route(src,dest,n,value):
             data_generator)
         #print(t0_1)
         tf_link = eval(f"t{src}_{i}")
-        print("node1 :",src)
-        print("node2: ",i)
-        print("tf_link :",tf_link)
+        # print("node1 :",src)
+        # print("node2: ",i)
+        # print("tf_link :",tf_link)
     
         available_bit_space = available(src,i,tf_link)
         if available_bit_space >= n:
             traffic_prediction.append(1)
         else:
             traffic_prediction.append(0)
-        print("traffic prediction list= ",traffic_prediction)
+        print("Traffic prediction list : ",traffic_prediction)
 
     count_1 = 0
     count_0 = 0
@@ -220,7 +227,7 @@ def adaptive_route(src,dest,n,value):
             # print("traffic_prediction[j] : ",traffic_prediction[j])
             allow_adj.append(adj[j]*traffic_prediction[j])
 
-    print("allow_adj ", list(set(allow_adj)))
+    print("Possible next nodes : ", list(set(allow_adj)))
     # if count_1 <= len(traffic_prediction):
     #     dijkstra.print_paths(main.node1, main.dest, allow_adj)
 
@@ -290,11 +297,11 @@ def adaptive_route(src,dest,n,value):
             print("HOP COUNT ADAPTIVE_xy : ",hop_count_adaptive_xy)
             next_xy_node_coordinate = []
             next_xy_node_coordinate = path[1]
-            print("next_xy_coordinate : ",next_xy_node_coordinate)
+            #print("next_xy_coordinate : ",next_xy_node_coordinate)
             for key,value in dict1.items():
                 if list(value) == next_xy_node_coordinate:
                     next_xy_node = key
-                    print("next_xy_node : ",next_xy_node)
+                    #print("next_xy_node : ",next_xy_node)
             wait=0
             flag_wait_adaptive=0
             while((wait+hop_count_adaptive_xy)+1<=hop_count_adaptive and flag_wait_adaptive != 1):
@@ -312,6 +319,7 @@ def adaptive_route(src,dest,n,value):
                     wait += 1
                     print("WAIT:",wait)
                     print("FINAL_XY_NODE from waiting : ",final_next_node)
+                    print("")
                     flag_wait_adaptive=1
 
             if(flag_wait_adaptive != 1):
@@ -320,12 +328,15 @@ def adaptive_route(src,dest,n,value):
                 wait_delay += wait
                 print("WAIT delay (adaptive if)",wait_delay)
                 final_path.append(new_next_node)
+                print("FINAL_XY_NODE (adaptive) : ",new_next_node)
+                print("")
                 xy_routing(new_next_node,dest,n)
             else:
                 #final_next_node=next_xy_node
                 #global wait_delay
                 wait_delay += wait
-                print("WAIT delay (adaptive else",wait_delay)
+                print("WAIT delay (adaptive else)",wait_delay)
+                print("")
                 final_path.append(final_next_node)
                 xy_routing(final_next_node,dest,n)
             
@@ -335,7 +346,7 @@ def adaptive_route(src,dest,n,value):
             allow_adj.clear()
             traffic_prediction.clear()
             #print("new next node",next_node)
-            print("allow_adj : empty",allow_adj)
+            # print("allow_adj : empty",allow_adj)
             # while next_node != dest:
             #     #adaptive_route(next_node, main.dest)
             #     # main.xy_main(next_node, main.dest,main.n)
@@ -347,7 +358,7 @@ def adaptive_route(src,dest,n,value):
     else:
         
         #virtual_channel.create_virtual_channel(src)
-        print("virtual channel")
+        #print("virtual channel")
         ack=virtual_channel.request()
         print("Acknowledgemet is given, therefore flag value is "+str(ack))
         if(ack==1):
@@ -355,6 +366,7 @@ def adaptive_route(src,dest,n,value):
             vcNode=virtual_channel.create_virtual_channel(blocked_node,dest)
 
             vc_delay = virtual_channel.delay_vc(vcNode,dest)
+            print("VC DELAY (if): ",vc_delay)
             #******
             wait_or_not = 0
             
@@ -426,12 +438,12 @@ def adaptive_route(src,dest,n,value):
                 
                 next_xy_node_coordinate = []
                 next_xy_node_coordinate = path[1]
-                print("next_xy_coordinate : ",next_xy_node_coordinate)
+                #print("next_xy_coordinate : ",next_xy_node_coordinate)
                 for key,value in dict1.items():
 
                         if list(value) == next_xy_node_coordinate:
                           next_xy_node = key
-                          print("next_xy_node : ",next_xy_node)
+                          #print("next_xy_node : ",next_xy_node)
                 data_generator = final_traffic.generate_data()
                 t0_1, t1_0, t1_2, t2_1, t2_3, t3_2, t0_4, t4_0, t4_5, t5_4, t1_5, t5_1, t5_6, t6_5, t2_6, t6_2, t6_7, t7_6, t3_7, t7_3, t4_8, t8_4, t8_9, t9_8, t5_9, t9_5, t6_10, t10_6, t9_10, t10_9, t7_11, t11_7, t11_10, t10_11, t12_13, t13_12, t8_12, t12_8, t9_13, t13_9, t10_14, t14_10, t13_14, t14_13, t14_15, t15_14, t11_15, t15_11 = next(
                 data_generator)
@@ -565,7 +577,7 @@ dict1 = {
     12: (3, 0), 13: (3, 1), 14: (3, 2), 15: (3, 3)
 }
 
-print("Node Assignment : \n", dict1)
+#print("Node Assignment : \n", dict1)
 
 # s = list(dict1[src])
 # d = list(dict1[dest])
@@ -619,6 +631,8 @@ print("Node Assignment : \n", dict1)
 #     print(f"Destination could not be reached, Total Delay=??")
 
 xy_routing(src, dest, n)
+
+print("*"*100)
 print("HOP_COUNT (normal link): ", hop_count)
 print("LINK_DELAY : ",delay_link*hop_count)
 print("HOP_COUNT (virtual) : ",hop_count_virtual)
