@@ -41,7 +41,7 @@ def print_paths(src, dest, adj):
 
     paths.sort(key=len)
     # print(paths)
-    print("adj is", adj)
+    #print("adj is", adj)
     
     hoplist=[]
     for i in paths:
