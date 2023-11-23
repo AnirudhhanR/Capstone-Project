@@ -3,8 +3,23 @@ import random
 import time
 
 def generate_random_traffic():
-    # return np.uint64(2 ** np.random.randint(0, 40))
-    return np.random.randint(0, 64)
+
+    # Number of sets
+    num_sets = 1
+
+    # Mean and standard deviation for the normal distribution
+    mean_value = 32
+    std_dev = 10
+
+    # Range for the final integer
+    lower_limit = 0
+    upper_limit = 64
+
+    # Iterate through each set
+    random_integer = int(np.clip(np.random.normal(mean_value, std_dev), lower_limit, upper_limit))
+
+        # Do something with the generated integer, e.g., print it
+    return random_integer
 
 def generate_data():
     while True:

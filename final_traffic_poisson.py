@@ -3,8 +3,16 @@ import random
 import time
 
 def generate_random_traffic():
-    # return np.uint64(2 ** np.random.randint(0, 40))
-    return np.random.randint(0, 64)
+    # Set the lambda parameter for the Poisson distribution
+    lambda_param = 20  # You can adjust this based on your desired rate
+
+    # Generate Poisson random numbers
+    poisson_numbers = np.random.poisson(lambda_param, size=1)
+
+    # Clip values to be between 0 and 64
+    poisson_numbers_clipped = np.clip(poisson_numbers, 0, 64)
+
+    return poisson_numbers_clipped[0]
 
 def generate_data():
     while True:
