@@ -41,7 +41,7 @@ def print_paths(src, dest, adj):
 
     paths.sort(key=len)
     # print(paths)
-    print("adj is", adj)
+    #print("adj is", adj)
     
     hoplist=[]
     for i in paths:
@@ -58,7 +58,7 @@ def print_paths(src, dest, adj):
 
     #print('hoplist=',hoplist)
     nextnode1 = hoplist[0][1]
-    print(f'next node is {nextnode1}')
+    # print(f'next node is {nextnode1}')
     return nextnode1
     # print(f"blocked node is {src}")
     
