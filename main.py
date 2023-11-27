@@ -641,8 +641,3 @@ print("WAIT DELAY : ",wait_delay)
 x = "->".join(map(str,final_path))
 print("Final_path : ",x)
 print("TOTAL DELAY : ",(delay_link*hop_count)+(hop_count_virtual*1.4)+(wait_delay))
-
-
-
-"""
-"""
