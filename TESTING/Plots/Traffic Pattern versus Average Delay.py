@@ -164,9 +164,9 @@ i = 0.0
 # print(average_list20)
 x_pos = [1,3,5,7,9,11,13]
 y_pos = []
-for i in range(0,22):
+for i in range(0,21):
     y_pos.append(i)
-    i = i + 0.5
+    i = i + 1
 name = ('butterfly','exponential', 'hotspot\ncentre', 'hotspot\nedge', 'normal', 'poisson', 'random')
 print(hoplist64)
 print(random64)
