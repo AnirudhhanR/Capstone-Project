@@ -88,7 +88,7 @@ y_pos = []
 for i in range(0,21):
     y_pos.append(i)
     i = i + 1
-name = ('VC',"XY Adaptive", "XY")
+name = ('Proposed Algorithm',"Adaptive XY", "XY")
 
 plt.subplot(2,2,1)
 plt.bar(x_pos, list5, width = 1.25)
