@@ -38,37 +38,37 @@ import numpy as np
 
 
 # deepath
-butterfly5 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/BUTTERFLY_TRAFFIC/0_to_15_bitsize_5.csv')
-exp5 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/EXPONENTIAL/0_to_15_bitsize_5.csv')
-hotspotcentre5 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_5.csv')
-hotspotedge5 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_5.csv")
-normal5 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/NORMAL_TRAFFIC/0_to_15_bitsize_5.csv")
-poisson5 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_5.csv")
-random5 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/RANDOM_TRAFFIC/0_to_15_bitsize_5.csv")
+butterfly5 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/BUTTERFLY_TRAFFIC/0_to_15_bitsize_5.csv')
+exp5 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/EXPONENTIAL/0_to_15_bitsize_5.csv')
+hotspotcentre5 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_5.csv')
+hotspotedge5 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_5.csv")
+normal5 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/NORMAL_TRAFFIC/0_to_15_bitsize_5.csv")
+poisson5 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_5.csv")
+random5 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/RANDOM_TRAFFIC/0_to_15_bitsize_5.csv")
 
-butterfly20 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/BUTTERFLY_TRAFFIC/0_to_15_bitsize_20.csv')
-exp20 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/EXPONENTIAL/0_to_15_bitsize_20.csv')
-hotspotcentre20 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_20.csv')
-hotspotedge20 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_20.csv")
-normal20 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/NORMAL_TRAFFIC/0_to_15_bitsize_20.csv")
-poisson20 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_20.csv")
-random20 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/RANDOM_TRAFFIC/0_to_15_bitsize_20.csv")
+butterfly20 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/BUTTERFLY_TRAFFIC/0_to_15_bitsize_20.csv')
+exp20 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/EXPONENTIAL/0_to_15_bitsize_20.csv')
+hotspotcentre20 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_20.csv')
+hotspotedge20 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_20.csv")
+normal20 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/NORMAL_TRAFFIC/0_to_15_bitsize_20.csv")
+poisson20 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_20.csv")
+random20 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/RANDOM_TRAFFIC/0_to_15_bitsize_20.csv")
 
-butterfly40 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/BUTTERFLY_TRAFFIC/0_to_15_bitsize_40.csv')
-exp40 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/EXPONENTIAL/0_to_15_bitsize_40.csv')
-hotspotcentre40 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_40.csv')
-hotspotedge40 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_40.csv")
-normal40 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/NORMAL_TRAFFIC/0_to_15_bitsize_40.csv")
-poisson40 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_40.csv")
-random40 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/RANDOM_TRAFFIC/0_to_15_bitsize_40.csv")
+butterfly40 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/BUTTERFLY_TRAFFIC/0_to_15_bitsize_40.csv')
+exp40 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/EXPONENTIAL/0_to_15_bitsize_40.csv')
+hotspotcentre40 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_40.csv')
+hotspotedge40 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_40.csv")
+normal40 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/NORMAL_TRAFFIC/0_to_15_bitsize_40.csv")
+poisson40 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_40.csv")
+random40 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/RANDOM_TRAFFIC/0_to_15_bitsize_40.csv")
 
-butterfly64 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/BUTTERFLY_TRAFFIC/0_to_15_bitsize_64.csv')
-exp64 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/EXPONENTIAL/0_to_15_bitsize_64.csv')
-hotspotcentre64 = pd.read_csv('C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_64.csv')
-hotspotedge64 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_64.csv")
-normal64 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/NORMAL_TRAFFIC/0_to_15_bitsize_64.csv")
-poisson64 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_64.csv")
-random64 = pd.read_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/RANDOM_TRAFFIC/0_to_15_bitsize_64.csv")
+butterfly64 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/BUTTERFLY_TRAFFIC/0_to_15_bitsize_64.csv')
+exp64 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/EXPONENTIAL/0_to_15_bitsize_64.csv')
+hotspotcentre64 = pd.read_csv('C:/Users/Deepa V/Downloads/traffic/HOTSPOT_CENTER_TRAFFIC/0_to_15_bitsize_64.csv')
+hotspotedge64 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/HOTSPOT_EDGES_TRAFFIC/0_to_15_bitsize_64.csv")
+normal64 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/NORMAL_TRAFFIC/0_to_15_bitsize_64.csv")
+poisson64 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/POISSON_TRAFFIC_DISTRIBUTION/0_to_15_bitsize_64.csv")
+random64 = pd.read_csv("C:/Users/Deepa V/Downloads/traffic/RANDOM_TRAFFIC/0_to_15_bitsize_64.csv")
 
 
 # Drop columns from DataFrames
@@ -121,11 +121,14 @@ labels = ['Butterfly', 'Exponential', 'Hotspot Center', 'Hotspot Edge', 'Normal'
 colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta']
 
 for ax, data, label, color in zip(axs1, [butterfly5, exp5, hotspotcentre5, hotspotedge5, normal5, poisson5, random5], labels, colors):
-    ax.plot(index1, np.array(data['Total Delay']), linestyle='-', color=color, linewidth = 2.5)
+    if label == 'Random':
+        ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, label=label, linewidth = 2.5)
+    else:
+        ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, label=label, linewidth = 2.5)
 
-fig1.text(0.04, 0.5, 'Latency (in Cycles)', va='center', rotation='vertical', fontsize=16)
+fig1.text(0.04, 0.5, 'Hop Count', va='center', rotation='vertical', fontsize=16)
 fig1.legend(labels, loc='upper right')
-fig1.suptitle('Latency vs Iteration(5 bits)', fontsize=16)
+fig1.suptitle('Hop Count vs Iteration(5 bits)', fontsize=16)
 fig1.text(0.5, 0.04, 'Iteration', ha='center', fontsize=16)
 
 #************************************************************************************************************************************
@@ -137,12 +140,12 @@ labels = ['Butterfly', 'Exponential', 'Hotspot Center', 'Hotspot Edge', 'Normal'
 colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta']
 
 for ax, data, label, color in zip(axs2, [butterfly20, exp20, hotspotcentre20, hotspotedge20, normal20, poisson20, random20], labels, colors):
-    ax.plot(index1, np.array(data['Total Delay']), linestyle='-', color=color, label=label, linewidth = 2.5)
+    ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, label=label, linewidth = 2.5)
  
 
-fig2.text(0.04, 0.5, 'Latency (in Cycles)', va='center', rotation='vertical', fontsize=16)
+fig2.text(0.04, 0.5, 'Hop Count', va='center', rotation='vertical', fontsize=16)
 fig2.legend(labels, loc='upper right')
-fig2.suptitle('Latency vs Iteration(20 bits)', fontsize=16)
+fig2.suptitle('Hop Count vs Iteration(20 bits)', fontsize=16)
 fig2.text(0.5, 0.04, 'Iteration', ha='center', fontsize=16)
 
 
@@ -155,11 +158,11 @@ labels = ['Butterfly', 'Exponential', 'Hotspot Center', 'Hotspot Edge', 'Normal'
 colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta']
 
 for ax, data, label, color in zip(axs3, [butterfly40, exp40, hotspotcentre40, hotspotedge40, normal40, poisson40, random40], labels, colors):
-    ax.plot(index1, np.array(data['Total Delay']), linestyle='-', color=color, linewidth = 2.5)
+    ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, linewidth = 2.5)
 
-fig3.text(0.04, 0.5, 'Latency (in Cycles)', va='center', rotation='vertical', fontsize=16)
+fig3.text(0.04, 0.5, 'Hop Count', va='center', rotation='vertical', fontsize=16)
 fig3.legend(labels, loc='upper right')
-fig3.suptitle('Latency vs Iteration(40 bits)', fontsize=16)
+fig3.suptitle('Hop Count vs Iteration(40 bits)', fontsize=16)
 fig3.text(0.5, 0.04, 'Iteration', ha='center', fontsize=16)
 
 #************************************************************************************************************************************
@@ -173,13 +176,13 @@ colors = ['blue', 'green', 'red', 'purple', 'orange', 'cyan', 'magenta']
 for ax, data, label, color in zip(axs4, [butterfly64, exp64, hotspotcentre64, hotspotedge64, normal64, poisson64, random64], labels, colors):
     
     if label == 'Exponential':
-        ax.plot(index, np.array(data['Total Delay']), linestyle='-', color=color, label=label, linewidth = 2.5)
+        ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, label=label, linewidth = 2.5)
     else:
-        ax.plot(index1, np.array(data['Total Delay']), linestyle='-', color=color, label=label, linewidth = 2.5)
+        ax.plot(index1, np.array(data['Total Hopcount']), linestyle='-', color=color, label=label, linewidth = 2.5)
 
-fig4.text(0.04, 0.5, 'Latency (in Cycles)', va='center', rotation='vertical', fontsize=16)
+fig4.text(0.04, 0.5, 'Hop Count', va='center', rotation='vertical', fontsize=16)
 fig4.legend(labels, loc='upper right')
-fig4.suptitle('Latency vs Iteration (64 bits)', fontsize=16)
+fig4.suptitle('Hop Count vs Iteration (64 bits)', fontsize=16)
 fig4.text(0.5, 0.04, 'Iteration', ha='center', fontsize=16)
 
 

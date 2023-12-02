@@ -1,0 +1,36 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+dynamic_xy5 = {'Total Delay': [1, 2, 3, np.nan, 5, 6, 7, 8, 9]}
+dynamic_adaptive5 = {'Total Delay': [2, 3, 4, 5, 6, 7, np.nan, 9, 10]}
+vc5 = {'Total Delay': [1, 2, 3, 4, 5, 6, 7, 8, 9]}
+
+index = list(range(1, 10, 1))
+
+fig1, axs1 = plt.subplots(3, 1, figsize=(10, 15), sharex=True, gridspec_kw={'hspace': 0.5})
+
+labels = ['XY routing', 'ADAPTIVE routing', 'ADAPTIVE WITH VC routing']
+colors = ['blue', 'green', 'red']
+
+for ax, data, label, color in zip(axs1, [dynamic_xy5, dynamic_adaptive5, vc5], labels, colors):
+    x_values = np.array(index)
+    y_values = np.array(data['Total Delay'])
+
+    # Find positions with np.nan values
+    nan_positions = np.where(np.isnan(y_values))[0]
+
+    # Plot normal line
+    ax.plot(x_values, y_values, linestyle='-', color=color, label=label)
+
+    # Add discontinuity markers where np.nan values occur
+    if nan_positions.size > 0:
+        for nan_position in nan_positions:
+            ax.scatter(x_values[nan_position], y_values[nan_position], color='red', marker='o', s=100, zorder=5)
+
+fig1.text(0.04, 0.5, 'Total Delays', va='center', rotation='vertical')
+fig1.legend(labels, loc='upper right')
+fig1.suptitle('Total Delay vs Iteration (5 bits)', fontsize=16)
+fig1.text(0.5, 0.04, 'Iteration', ha='center', fontsize=14)
+
+plt.show()

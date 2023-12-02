@@ -488,7 +488,7 @@ for abc in range(0,100):
     # Input
     src = 0 #int(input("Enter src node: "))
     dest = 15 #int(input("Enter dest node: "))
-    n = 19 #int(input("Enter number of bits that you want to send between source node and destination node:"))
+    n = 64 #int(input("Enter number of bits that you want to send between source node and destination node:"))
     final_path.append(src)
     # Nodes
     nodes = np.arange(0, 16).reshape(4, 4)
@@ -534,4 +534,4 @@ for abc in range(0,100):
 
 
 print(testingdata)
-# testingdata.to_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/test_results/Random_Traffic/0_to_15_bitsize_3.csv")
+testingdata.to_csv("C:/Users/Deepa V/Documents/GitHub/Capstone-Project/TESTING/testfiles/Random_Traffic/0_to_15_bitsize_64_new_final_final.csv")
